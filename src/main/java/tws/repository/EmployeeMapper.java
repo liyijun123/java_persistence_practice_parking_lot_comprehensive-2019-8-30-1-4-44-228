@@ -1,3 +1,4 @@
+    
 package tws.repository;
 
 import org.apache.ibatis.annotations.Mapper;
@@ -9,5 +10,8 @@ import java.util.List;
 @Mapper
 public interface EmployeeMapper {
     List<Employee> selectAll();
+
    void insert(@Param("employee") Employee employee);
+
+    Employee selectById(@Param("id") String id);
 }
